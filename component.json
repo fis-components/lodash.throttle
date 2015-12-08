@@ -1,0 +1,10 @@
+{
+    "repos": "https://github.com/lodash/lodash.git",
+    "version": "3.0.4",
+    "tag": "master",
+    "name": "lodash.throttle",
+    "main": "index.js",
+    "dependencies": {
+        "lodash.debounce": "^3.0.0"
+    }
+}
