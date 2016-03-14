@@ -1,5 +1,5 @@
 /**
- * lodash 4.0.0 (Custom Build) <https://lodash.com/>
+ * lodash 4.0.1 (Custom Build) <https://lodash.com/>
  * Build: `lodash modularize exports="npm" -o ./`
  * Copyright 2012-2016 The Dojo Foundation <http://dojofoundation.org/>
  * Based on Underscore.js 1.8.3 <http://underscorejs.org/LICENSE>
@@ -22,7 +22,7 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * result of the last `func` invocation.
  *
  * **Note:** If `leading` and `trailing` options are `true`, `func` is invoked
- * on the trailing edge of the timeout only if the the throttled function is
+ * on the trailing edge of the timeout only if the throttled function is
  * invoked more than once during the `wait` timeout.
  *
  * See [David Corbacho's article](http://drupalmotion.com/article/debounce-and-throttle-visual-explanation)
@@ -41,14 +41,14 @@ var FUNC_ERROR_TEXT = 'Expected a function';
  * @returns {Function} Returns the new throttled function.
  * @example
  *
- * // avoid excessively updating the position while scrolling
+ * // Avoid excessively updating the position while scrolling.
  * jQuery(window).on('scroll', _.throttle(updatePosition, 100));
  *
- * // invoke `renewToken` when the click event is fired, but not more than once every 5 minutes
+ * // Invoke `renewToken` when the click event is fired, but not more than once every 5 minutes.
  * var throttled = _.throttle(renewToken, 300000, { 'trailing': false });
  * jQuery(element).on('click', throttled);
  *
- * // cancel a trailing throttled invocation
+ * // Cancel the trailing throttled invocation.
  * jQuery(window).on('popstate', throttled.cancel);
  */
 function throttle(func, wait, options) {
@@ -62,7 +62,11 @@ function throttle(func, wait, options) {
     leading = 'leading' in options ? !!options.leading : leading;
     trailing = 'trailing' in options ? !!options.trailing : trailing;
   }
-  return debounce(func, wait, { 'leading': leading, 'maxWait': wait, 'trailing': trailing });
+  return debounce(func, wait, {
+    'leading': leading,
+    'maxWait': wait,
+    'trailing': trailing
+  });
 }
 
 /**
@@ -89,8 +93,6 @@ function throttle(func, wait, options) {
  * // => false
  */
 function isObject(value) {
-  // Avoid a V8 JIT bug in Chrome 19-20.
-  // See https://code.google.com/p/v8/issues/detail?id=2291 for more details.
   var type = typeof value;
   return !!value && (type == 'object' || type == 'function');
 }

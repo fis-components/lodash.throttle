@@ -6,7 +6,7 @@
     "dependencies": {
         "lodash.debounce": "^4.0.0"
     },
-    "version": "4.0.0",
+    "version": "4.0.1",
     "description": "The lodash method `_.throttle` exported as a module.",
     "reposType": "npm"
 }
