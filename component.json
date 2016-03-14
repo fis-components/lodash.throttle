@@ -4,9 +4,9 @@
     "name": "lodash.throttle",
     "main": "index.js",
     "dependencies": {
-        "lodash.debounce": "^3.0.0"
+        "lodash.debounce": "^4.0.0"
     },
-    "version": "3.0.4",
-    "description": "The modern build of lodash’s `_.throttle` as a module.",
+    "version": "4.0.0",
+    "description": "The lodash method `_.throttle` exported as a module.",
     "reposType": "npm"
 }
